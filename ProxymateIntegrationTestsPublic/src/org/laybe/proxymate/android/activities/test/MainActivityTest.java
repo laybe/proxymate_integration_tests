@@ -41,24 +41,5 @@ public class MainActivityTest  extends ActivityInstrumentationTestCase2<MainActi
 		// Drawer should be closed again.
 		onView(withId(R.id.drawer_layout)).check(matches(isClosed()));
 	}
-/*
-	@SuppressWarnings("unchecked")
-	public void testDrawerOpenAndClick() {
-		openDrawer(R.id.drawer_layout);
 
-		onView(withId(R.id.drawer_layout)).check(matches(isOpen()));
-
-		// Click an item in the drawer. We use onData because the drawer is backed by a ListView, and
-		// the item may not necessarily be visible in the view hierarchy.
-		int rowIndex = 2;
-		String rowContents = DrawerActivity.DRAWER_CONTENTS[rowIndex];
-		onData(allOf(is(instanceOf(String.class)), is(rowContents))).perform(click());
-
-		// clicking the item should close the drawer.
-		onView(withId(R.id.drawer_layout)).check(matches(isClosed()));
-
-		// The text view will now display "You picked: Pickle"
-		onView(withId(R.id.drawer_text_view)).check(matches(withText("You picked: " + rowContents)));
-	}
-	*/
 }
